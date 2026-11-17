@@ -1,0 +1,29 @@
+:root{--bg:#f4f7f6;--ink:#10231f;--muted:#6b7f7a;--brand:#0f766e;--line:#dbe5e2;--card:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1715;--ink:#e6f1ee;--muted:#8fa7a1;--brand:#2dd4bf;--line:#223632;--card:#13211e}}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 16px}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+h1{margin:0;font-size:1.5rem;color:var(--brand)}
+.muted{color:var(--muted);margin-right:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;align-items:center}
+input,select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+.btn{background:var(--brand);color:#fff;border:0;padding:10px 16px;border-radius:10px;cursor:pointer;font:inherit;font-weight:600}
+.btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--brand)}
+.btn.sm{padding:5px 10px;margin-right:6px;font-size:.8rem}
+.btn.danger{background:#dc2626}
+.auth{min-height:100vh;display:grid;place-items:center;padding:16px}
+.auth .card{width:100%;max-width:380px;display:grid;gap:12px}
+.link{color:var(--brand);cursor:pointer;text-align:center;font-size:.9rem}
+.err{color:#dc2626;font-size:.9rem;margin-bottom:10px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;color:var(--muted)}
+.stat b{display:block;font-size:1.8rem;color:#d97706}
+.stat.ok b{color:#16a34a}.stat.no b{color:#dc2626}
+.table{overflow-x:auto;padding:0}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--muted);font-weight:600;font-size:.8rem;text-transform:uppercase}
+.tag{padding:3px 10px;border-radius:99px;font-size:.78rem;font-weight:600}
+.tag.Pending{background:#fef3c7;color:#92400e}.tag.Approved{background:#dcfce7;color:#166534}.tag.Rejected{background:#fee2e2;color:#991b1b}
